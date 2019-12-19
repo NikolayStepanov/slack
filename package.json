@@ -1,24 +1,24 @@
 {
-  "name": "front",
+  "name": "slack",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Nikolay Stepanov <stepanovnikola96@mail.ru>",
+  "license": "MIT",
   "scripts": {
-    "start": "live-server --entry-file=index.html"
+    "start": "webpack-dev-server"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "live-server": "^1.2.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-resource": "^1.5.1"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NikolayStepanov/Slack-Frontend.git"
-  },
-  "bugs": {
-    "url": "https://github.com/NikolayStepanov/Slack-Frontend/issues"
-  },
-  "homepage": "https://github.com/NikolayStepanov/Slack-Frontend#readme",
-  "description": ""
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
 }
