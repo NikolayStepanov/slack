@@ -9,6 +9,7 @@ import lombok.ToString;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(of = { "id" })
 @ToString(of = { "id", "name" })
-public class User {
+public class User implements Serializable {
     @Id
     @JsonView(Views.IdName.class)
     private String id;
