@@ -1,11 +1,17 @@
 <template>
-    <div>
-        <input type="text" placeholder="Write something" v-model="text" />
-        <input type="button" value="Save" @click="save" />
-    </div>
+    <v-layout row>
+        <v-text-field
+                label="New message"
+                placeholder="Write something"
+                v-model="text"
+        />
+        <v-btn @click="save">
+            Save
+        </v-btn>
+    </v-layout>
 </template>
 
-<<script>
+<script>
     import { sendMessage } from 'util/ws'
     export default {
         props: ['messages', 'messageAttr'],
@@ -26,6 +32,7 @@
                 sendMessage({id: this.id, text: this.text})
                 this.text = ''
                 this.id = ''
+
             }
         }
     }
